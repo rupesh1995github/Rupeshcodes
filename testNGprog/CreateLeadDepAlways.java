@@ -1,4 +1,4 @@
-package week2.day1;
+package testNGprog;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,20 +9,25 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
-public class CreateLead {
+public class CreateLeadDepAlways{
+	
+	
+	
+	
+
 	@Test
 	public void runCreateLead() {
 		
 		
-		WebDriverManager.chromedriver().setup();
-        ChromeDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("http://leaftaps.com/opentaps/control/login");
-        driver.findElementById("username").sendKeys("demosalesmanager");
-        driver.findElementById("password").sendKeys("crmsfa");
-        driver.findElementByClassName("decorativeSubmit").click();
-        driver.findElementByLinkText("CRM/SFA").click();
-        driver.findElementByLinkText("Leads").click();
+	   WebDriverManager.chromedriver().setup();
+		   ChromeDriver driver = new ChromeDriver();
+		    //driver.manage().window().maximize();
+		    driver.get("http://leaftaps.com/opentaps/control/login");
+		    driver.findElementById("username").sendKeys("demosalesmanager");
+		    driver.findElementById("password").sendKeys("crmsfa");
+		    driver.findElementByClassName("decorativeSubmit").click();
+		    driver.findElementByLinkText("CRM/SFA").click();
+        driver.findElementByLinkText("Leads1").click(); //Issue in this line Leads1, Correct value is Leads
         driver.findElementByLinkText("Create Lead").click();
         driver.findElementById("createLeadForm_companyName").sendKeys("TestLeaf");
         driver.findElementById("createLeadForm_firstName").sendKeys("Rupesh");
@@ -42,8 +47,8 @@ public class CreateLead {
         WebElement Country = driver.findElementById("createLeadForm_generalCountryGeoId");
         Select Countryname =new Select(Country);
         Countryname.selectByVisibleText("India");
-        //driver.findElementByXPath("//span[contains(text(),'Phone Number')]/following::input").sendKeys("9999988888");
-        //driver.findElementByXPath("//span[contains(text(),'E-Mail Address')]/following::input").sendKeys("rupesh.k@gmail.com");
+        driver.findElementByXPath("//span[contains(text(),'Phone Number')]/following::input").sendKeys("9999988888");
+        driver.findElementByXPath("//span[contains(text(),'E-Mail Address')]/following::input").sendKeys("rupesh.k@gmail.com");
         driver.findElementByName("submitButton").click();
         String title=driver.getTitle();
         System.out.println(title);

@@ -9,7 +9,7 @@ public class PrimeNumber {
 		int remainder;
 		boolean flag=true;
 		
-		for (int i = 2; i < input/2 ; i++) 
+		for (int i = 2; i < input ; i++) 
 {
 			
 			remainder = input%i;

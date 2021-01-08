@@ -11,10 +11,10 @@ public class FindSecondLargest {
 		Arrays.sort(num);
 	
 		for (int i = 0; i < num.length; i++) {
-			System.out.print(num[i]+" ");
+			//System.out.print(num[i]+" ");
 		}
 		
-		System.out.println();
+		//System.out.println();
 		System.out.println(num[num.length-2]);
 	}
 }

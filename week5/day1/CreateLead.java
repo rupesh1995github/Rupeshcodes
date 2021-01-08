@@ -1,4 +1,4 @@
-package week2.day1;
+package week5.day1;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -42,8 +42,8 @@ public class CreateLead {
         WebElement Country = driver.findElementById("createLeadForm_generalCountryGeoId");
         Select Countryname =new Select(Country);
         Countryname.selectByVisibleText("India");
-        //driver.findElementByXPath("//span[contains(text(),'Phone Number')]/following::input").sendKeys("9999988888");
-        //driver.findElementByXPath("//span[contains(text(),'E-Mail Address')]/following::input").sendKeys("rupesh.k@gmail.com");
+        driver.findElementByXPath("//span[contains(text(),'Phone Number')]/following::input").sendKeys("9999988888");
+        driver.findElementByXPath("//span[contains(text(),'E-Mail Address')]/following::input").sendKeys("rupesh.k@gmail.com");
         driver.findElementByName("submitButton").click();
         String title=driver.getTitle();
         System.out.println(title);
